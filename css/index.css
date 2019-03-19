@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Play:400,700|Righteous');
+
+:root {
+    font-family: 'Play', sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h2{
+	text-align: center;
+	font-size: 1.2rem;
+	margin-top: 50px;
+}
+
+
+body {
+    max-width: 980px;
+    margin: auto;
+
+}
+
+#header_nav{
+	max-width: 980px;
+	margin: 0 auto;
+}
+
+#linkHome, #linkGallery, #linkContacts{	
+	color: #008200;
+}
+
+#linkHome:hover, #linkGallery:hover, #linkContacts:hover{	
+	color: #00a800;
+}
+
+ @-webkit-keyframes infinite-auto-scale{
+    from {
+		transform: scale(1,1);
+    }
+    to {
+		transform: scale(1.1, 1.1);
+		transition-delay: 500ms;
+    }
+}
+ 
+.header-main-img{
+	overflow: hidden;
+}
+
+ 
+.header-main-img img {
+	width: 100%;
+	height: auto;
+	animation-name: infinite-auto-scale;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	animation-delay: 200ms;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+.container {
+	margin-top: 60px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+form {
+	flex-basis: 100%;
+	margin: 20px auto;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	
+}
+
+@media (min-width: 602px) {
+	
+	form {
+		flex-wrap: nowrap;
+		flex-basis: 50%;
+	}
+	
+}
+
+
+
+
