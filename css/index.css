@@ -16,7 +16,7 @@ h2{
 body {
     font-family: Arial, Helvetica, sans-serif;
     max-width: 980px;
-    margin: auto;
+    margin: 0 auto;
 
 }
 
@@ -54,23 +54,36 @@ body {
 	animation-duration: 3s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
-	animation-direction: alternate;
+    animation-direction: alternate;
 }
 
-main section {
+.content {
 	margin-top: 60px;
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
 }
 
-main section p{
-    max-width: 450px;
+.mainText{
+    max-width: 445px;
 }
 
-main section form {
-	width: 100%;
-	margin: 20px auto;
+.mainText h2{
+    text-align: left;
+}
+
+.content img{
+    width: 100%;
+    height: auto;
+}
+
+.content-forms {
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+}
+
+.content-forms form {
+	margin: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -78,41 +91,91 @@ main section form {
 	
 }
 
-main section form label {
+.content-forms form label {
     width: 100%;
     text-align: center;
 }
 
-main section form input[type=text] {
+.content-forms form input[type=text] {
     width: 100%;
     margin-bottom: 20px;
 }
 
-main section form input[type=submit]{
+.content-forms form input[type=submit]{
     min-width: 30%;
     margin: 0 auto;
 }
 
-@media (min-width: 480px) {
-	main section form {
+.content-forms p{
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 570px) {
+    .content {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mainText{
+        flex-basis: 50%;
+        max-width: 445px;
+    }
+
+    .mainText h2{
+        margin-top: 5px;
+    }
+
+    .content img{
+        flex-basis: 50%;
+        width: 100%;
+        height: auto;
+    }
+
+    .content-forms {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .content-forms h2{
+        flex-basis: 55%;
+    }
+
+	.content-forms form {
+        flex-basis: 55%;
+        margin: 0;
+        padding: 0;
         max-width: 600px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: flex-end;
     }
-	main section form label {
-        width: 30%;
-        text-align: right;
+
+	.content-forms form label {
+        flex-basis: 25%;
+        text-align: left;
         padding-right: 10px;
     }
     
-    main section form input[type=text] {
-        width: 70%;
+    .content-forms form input[type=text] {
+        flex-basis: 75%;
         margin-bottom: 20px;
     }
     
-    main section form input[type=submit]{
+    .content-forms form input[type=submit]{
         width: 30%;
         margin: 0;
+    }
+
+    .content-forms p{
+        padding-top: 10px;
+        margin: 0;
+        width: auto;
+        font-size: 0.9rem;
     }
 }
